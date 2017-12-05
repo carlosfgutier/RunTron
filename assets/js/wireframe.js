@@ -356,11 +356,6 @@ window.onclick = function(event) {
 //This is the re-init function to restart the game.
       $(".reinit").on("click", function() {
       location.reload();
-      // $(".wrapper").removeClass("hidden");
-      // $(".initiate").addClass("hidden");
-      // $("#init").addClass("hidden");
-      // $(".reinit").addClass("hidden");
-      // $(".results").addClass("hidden");
 
 //Reset variables.
       clockRunning = false;
