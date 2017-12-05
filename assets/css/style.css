@@ -187,6 +187,8 @@ ol {
 
     }
 
+    th {color: white;}
+
     #myBtn {font-size: 40px;
         margin-top: 70px;
         margin-bottom: 100px; 
@@ -239,5 +241,4 @@ ol {
         bottom: 50px;
         border-radius: 60px;
     }
-
 }
