@@ -1,4 +1,4 @@
-black<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -32,7 +32,6 @@ black<!DOCTYPE html>
     <p>You have 60 seconds to run and encompass as much area as possible. Good luck!</p>
   </div>
 </div>
-<!--  -->
 
 <div class="row">
   <div id="weather" class ="col-lg-12">
@@ -41,12 +40,20 @@ black<!DOCTYPE html>
 </div>
 
 <div class ="row">
-  <div  class="col-lg-12 initiate">
-    <button id="init">Click to Begin</button>;
+  <div  id="marginNone" class="col-lg-12 initiate">
+    <img id="logo" src="assets/images/bike2.jpg">;
   </div>
 </div>
 
+<div class ="row">
+  <div  id="init" class="col-lg-12 initiate">
+    Click to Begin
+  </div>
+</div>
+
+<!-- Create a wrapper for the main game -->
 <section class="wrapper hidden">
+
   <div class="row">
     <div id="timeleft" class ="col-lg-12">
       <h3>Time Remaining: <span id="display"></span></h3>
@@ -59,21 +66,23 @@ black<!DOCTYPE html>
     </div>
   </div>
 
-  <div class="row">
+  <div class ="row">
     <div class="col-lg-4">
-    </div>
-      <div class="col-lg-4" id="map"></div>
-    <div class="col-lg-4">
-    </div>
+  </div>
+
+  <div id="map" class = "col-lg-8 mapimage">;
   </div>
 
   <div class="row">
     <div class="col-lg-4">
     </div>
-      <div class="col-lg-4" id="submit">Finish Battle</div>
+    <div id="submit" class="col-lg-4">
+      Finish battle
+    </div>
     <div class="col-lg-4">
     </div>
   </div>
+
 </section>
 
 <!-- Hide the restart assets until the game is over -->
@@ -103,7 +112,7 @@ black<!DOCTYPE html>
     </div>
     <div id="leaderboard" class="col-lg-6">
       <h2>Leaderboard</h2>
-      
+
       <table class="table" id='score-table'>
         <thead>
           <tr>

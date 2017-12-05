@@ -7,6 +7,8 @@ var polyMarkers = [];
 var weatherPos;
 var area;
 var posInterval;
+var currentCondition;
+var currentCity;
 
 //FIND USER
 function initMap() {
@@ -23,7 +25,7 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    $("#init").on("click", getNewPos);
+    $("#logo").on("click", getNewPos);
 
         function getNewPos() {
           posInterval = setInterval(getLocation, 5000);
@@ -56,7 +58,7 @@ function addToCompute() {
 };
 
 function getArea() {
-    area = google.maps.geometry.spherical.computeArea(polygonCoords);
+    area = Math.floor(google.maps.geometry.spherical.computeArea(polygonCoords));
     console.log(Math.floor(area));
 }
 
@@ -83,8 +85,8 @@ function getPos() {
           url: weatherURL,
           method: "GET"
         }).done(function(response) {
-          currentCond=(response.weather[0].main);
-          currentPlace=(response.name);
+          currentCondition=(response.weather[0].main);
+          currentCity=(response.name);
 
           var icon = "https://openweathermap.org/img/w/"+response.weather[0].icon+".png";
           var iconImg = $("<img src=\""+icon+"\">");
@@ -144,8 +146,8 @@ var database = firebase.database();
 
 var score;
 var currentTemp=0;
-var currentCond="";
-var currentPlace="";
+var currentCond= currentCondition;
+var currentPlace=currentCity;
 var scorearray=[];
 var highscorearray=[];
 var newscorearray=[];
@@ -306,7 +308,7 @@ function maingame(){
   console.log("start of game")
 
 clockRunning = false;
-time=30;
+time=300;
 
 // Get the modal
 var modal = document.getElementById('instModal');
@@ -353,15 +355,16 @@ window.onclick = function(event) {
       });
 //This is the re-init function to restart the game.
       $(".reinit").on("click", function() {
-      $(".wrapper").removeClass("hidden");
-      $(".initiate").addClass("hidden");
-      $("#init").addClass("hidden");
-      $(".reinit").addClass("hidden");
-      $(".results").addClass("hidden");
+      location.reload();
+      // $(".wrapper").removeClass("hidden");
+      // $(".initiate").addClass("hidden");
+      // $("#init").addClass("hidden");
+      // $(".reinit").addClass("hidden");
+      // $(".results").addClass("hidden");
 
 //Reset variables.
       clockRunning = false;
-      time=30;
+      time=300;
 
 //Initialize clock to 1 second intervals
     if (!clockRunning) {
