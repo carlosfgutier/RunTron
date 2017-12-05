@@ -190,6 +190,8 @@ ol {
     #myBtn {font-size: 40px;
         margin-top: 70px;
         margin-bottom: 100px; 
+        background-color: #02E2F2;
+        border-radius: 60px;
     }
 
     #conditions {font-size: 50px;
@@ -197,19 +199,29 @@ ol {
     }
 
     #init {font-size: 80px;
-        padding-top: 10px;
+        padding: 10px 10px 0 10px;
         margin-top: 70px;
         border: none;
-        background-color: gray;
-        color: #383838;
+        background-color: #02E2F2;
+        color: black;
+        border-radius: 60px;
+    }
+
+    #map {height: 1250px;
+        width: 600px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 10px;
     }
 
     #right {font-size: 80px;
+        margin-bottom: 40px;
 
     }
 
     #localscore {
         font-size: 30px;
+        margin-bottom: 60px;
     }
 
     #leaderboard {
@@ -221,8 +233,10 @@ ol {
         font-size: 80px;
         position: fixed;
         bottom: 0px;
-        left: 10%;
-        right: 10%;
+        left: 5%;
+        right: 5%;
+        bottom: 50px;
+        border-radius: 60px;
     }
 
 }
