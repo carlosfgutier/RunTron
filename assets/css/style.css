@@ -197,7 +197,7 @@ ol {
   and (-webkit-min-device-pixel-ratio: 2) {
 
     body {font-family: 'Orbitron', sans-serif;
-        background-image: url("../Images/black.png");
+        background-image: url("../images/black.png");
         background-size: cover;
         overflow-x: hidden;
     }
