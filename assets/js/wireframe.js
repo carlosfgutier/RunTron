@@ -286,7 +286,7 @@ for (var j=0; j<9; j++){
 // 3. Create Firebase event for adding hignhscore to the database and a row in the html when a user adds an entry
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
-  console.log(childSnapshot.val());
+  // console.log(childSnapshot.val());
 
   // Store everything into a variable.
   var HighName = childSnapshot.val().name;
