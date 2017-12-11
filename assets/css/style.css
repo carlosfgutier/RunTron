@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Orbitron', sans-serif;
-    background-image: url("../images/tronback.jpg");
+    background-image: url("../Images/tronback.jpg");
     background-size: cover;
     overflow-x: hidden;
 }
@@ -197,7 +197,7 @@ ol {
   and (-webkit-min-device-pixel-ratio: 2) {
 
     body {font-family: 'Orbitron', sans-serif;
-        background-image: url("../images/black.png");
+        background-image: url("../Images/Black.png");
         background-size: cover;
         overflow-x: hidden;
     }
@@ -222,10 +222,10 @@ ol {
         font-size: 40px;
         text-align: center;
         background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
+        margin: 15% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
+        width: 80%; 
     }
 
     #conditions {font-size: 50px;
@@ -283,5 +283,4 @@ ol {
         bottom: 50px;
         border-radius: 60px;
     }
-
 }
